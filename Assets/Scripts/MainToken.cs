@@ -16,17 +16,20 @@ public class MainToken : MonoBehaviour
         if (matched == false)
         {
             GameControl controlScript = gameControl.GetComponent<GameControl>();
-            if (spriteRenderer.sprite == back)
+
+            if (spriteRenderer.sprite == back) // Kartın arkası görünüyorsa
             {
                 if (controlScript.TokenUp(this))
                 {
-                    spriteRenderer.sprite = faces[faceIndex];
+                    spriteRenderer.sprite = faces[faceIndex]; // Kartın yüzünü göster
+                    transform.localScale = new Vector3(1.2f, 1.2f, 1); // %20 büyüt
                     controlScript.CheckTokens();
                 }
             }
-            else
+            else // Kartın yüzü görünüyorsa
             {
-                spriteRenderer.sprite = back;
+                spriteRenderer.sprite = back; // Kartın arkasını göster
+                transform.localScale = new Vector3(0.625f, 0.625f, 1); // Orijinal boyuta geri dön
                 controlScript.TokenDown(this);
             }
         }

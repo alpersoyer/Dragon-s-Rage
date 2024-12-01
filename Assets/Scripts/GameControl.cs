@@ -144,4 +144,4 @@ public class GameControl : MonoBehaviour
         mediumBtn.onClick.AddListener(() => MediumSetup());
         hardBtn.onClick.AddListener(() => HardSetup());
     }
-}
+} 
