@@ -22,7 +22,7 @@ public class MainToken : MonoBehaviour
                 if (controlScript.TokenUp(this))
                 {
                     spriteRenderer.sprite = faces[faceIndex]; // Kartın yüzünü göster
-                    transform.localScale = new Vector3(1.2f, 1.2f, 1); // %20 büyüt
+                    transform.localScale = new Vector3(1.5f, 1.5f, 1); // %20 büyüt
                     controlScript.CheckTokens();
                 }
             }
